@@ -24,7 +24,7 @@
 		height: 50px;
 		border-radius: 10px;
 		font-size: 30px;
-		cursor: none;
+		cursor: text;
 	}
 	#in:focus{
 		all: unset;
