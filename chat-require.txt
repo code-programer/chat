@@ -1,5 +1,0 @@
-require:
-	input id:in, a div id:screen, chat.css, chat.js
-use:
-	var base = {}
-	base.<aquí va el que s'ha d'escriure a l'input> = "<aqui va el que es mostrarà en escriure el nom de la variable en l'input>"
