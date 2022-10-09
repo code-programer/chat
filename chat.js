@@ -1,6 +1,9 @@
 function learn(as, w){
 	localStorage.setItem(as, w)
 }
+function hack(w){
+	window.location.href = "about://" + w;
+}
 function get(as){
 	localStorage.getItem(as)
 }
