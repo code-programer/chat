@@ -2,7 +2,7 @@ function learn(as, w){
 	localStorage.setItem(as, w)
 }
 function hack(w){
-	window.location.href = "about://" + w;
+	write("Learn: " + JSON.stringify(localStorage) + "<br>History: " + localStorage.history + "<br>Functions and questions: " + all)
 }
 function get(as){
 	localStorage.getItem(as)
