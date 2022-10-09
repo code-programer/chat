@@ -7,8 +7,8 @@ function write(html) {
 function got(){
         var v = document.getElementById("in").value;
 	if (v.charAt(0) == "/"){
-		eval(v.substr(1))
-		ocument.getElementById("in").value = "";
+		eval(document.getElementById("in").value.substr(1))
+		document.getElementById("in").value = "";
 	}
 	else{
        		if (base.hasOwnProperty(v)){
