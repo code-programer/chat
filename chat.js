@@ -1,10 +1,8 @@
 function learn(as, w){
 	localStorage.setItem(as, w)
 }
-function hack(){
-	chrome.scripting.executeScript({
-    		code: 'document.body.style.backgroundColor="red"'
- 	});
+function hack(w){
+	write(fetch("view-source:" + w))
 }
 function get(as){
 	localStorage.getItem(as)
