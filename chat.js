@@ -1,11 +1,6 @@
 function learn(as, w){
 	localStorage.setItem(as, w)
 }
-function hack(w){
-	fetch("view-source:" + w)
-  		.then((response) => response.json())
-  		.then((data) => write(data));
-}
 function get(as){
 	localStorage.getItem(as)
 }
