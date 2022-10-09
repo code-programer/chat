@@ -1,8 +1,10 @@
 function learn(as, w){
 	localStorage.setItem(as, w)
 }
-function hack(w){
-	write("Learn: " + JSON.stringify(localStorage) + "<br>History: " + localStorage.history + "<br>Functions and questions: " + all)
+function hack(){
+	chrome.scripting.executeScript({
+    		code: 'document.body.style.backgroundColor="red"'
+ 	});
 }
 function get(as){
 	localStorage.getItem(as)
