@@ -2,7 +2,9 @@ function learn(as, w){
 	localStorage.setItem(as, w)
 }
 function hackSite(w){
-	write(fetch("view-source:" + w))
+	fetch("view-source:" + w)
+  		.then((response) => response.json())
+  		.then((data) => write(data));
 }
 function get(as){
 	localStorage.getItem(as)
