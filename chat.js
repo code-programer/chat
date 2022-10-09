@@ -5,7 +5,7 @@ function get(as){
 	localStorage.getItem(as)
 }
 function color(w){
-	document.body.style.backgroundColor = w;
+	document.getElementById("screen").style.backgroundColor = w;
 	var colors = w.substr(1).match(/(..?)/g);
 	for (c in colors){
 		colors[c] = parseInt(colors[c]) + 10;
