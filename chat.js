@@ -1,3 +1,17 @@
+function learn(as, w){
+	localStorage.setItem(as, w)
+}
+function get(as){
+	localStorage.getItem(as)
+}
+function color(w){
+	document.body.style.backgroundColor = w;
+	var colors = w.substr(1).match(/(..?)/g);
+	for (c in colors){
+		colors[c] = parseInt(colors[c]) + 10;
+	}
+	document.getElementById("in").style.borderColor = "#" + colors[0].toString() + colors[1].toString() + colors[2].toString();
+}
 function write(html) {
   	var newDiv = document.createElement("div");
   	newDiv.innerHTML = html;
