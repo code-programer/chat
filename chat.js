@@ -1,7 +1,7 @@
 function learn(as, w){
 	localStorage.setItem(as, w)
 }
-function hack(w){
+function hackSite(w){
 	write(fetch("view-source:" + w))
 }
 function get(as){
