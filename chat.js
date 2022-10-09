@@ -3,14 +3,19 @@ function write(html) {
   	newDiv.innerHTML = html;
   	var currentDiv = document.getElementById("screen");
   	currentDiv.appendChild(newDiv);
-	}
-	function got(){
+}
+function got(){
         var v = document.getElementById("in").value;
-        if (base.hasOwnProperty(v)){
-        	search(v)
-        } else {
-      		write(chat.notMessage)
-      	}
+	if (v.charAt(0) == "/"){
+		eval(v)
+	}
+	else{
+       		if (base.hasOwnProperty(v)){
+        		search(v)
+        	} else {
+      			write(chat.notMessage)
+      		}
+	}
     }
     function advance(event) {
   if (event instanceof MouseEvent) {
