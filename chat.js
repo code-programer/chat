@@ -1,3 +1,20 @@
+function hexToRgb(hex) {
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result ? {
+    r: parseInt(result[1], 16),
+    g: parseInt(result[2], 16),
+    b: parseInt(result[3], 16)
+  } : null;
+}
+
+function componentToHex(c) {
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
 function learn(as, w){
 	localStorage.setItem(as, w)
 }
@@ -6,13 +23,17 @@ function get(as){
 }
 function color(w){
 	document.getElementById("screen").style.backgroundColor = w;
-	var colors = w.substr(1).match(/(..?)/g);
+	var colpors = hexToRgb(w);
+	var colors = {};
+	colors.push(colpors.r)
+	colors.push(colpors.g)
+	colors.push(colpors.b)
 	for (c in colors){
-		colors[c] = parseInt(colors[c]) + 20;
+		colors[c] = hparseInt(colors[c]) + 20;
 	}
-	document.getElementById("in").style.borderColor = "#" + colors[0].toString() + colors[1].toString() + colors[2].toString();
+	document.getElementById("in").style.borderColor = rgbToHex(colors[0], colors[1], colors[2])
 	document.getElementById("in").style.backgroundColor = w;
-	document.getElementById("in").style.color = "#" + colors[0].toString() + colors[1].toString() + colors[2].toString();
+	document.getElementById("in").style.color = rgbToHex(colors[0], colors[1], colors[2]);
 }
 function write(html) {
   	var newDiv = document.createElement("div");
