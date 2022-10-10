@@ -24,12 +24,12 @@ function get(as){
 function color(w){
 	document.getElementById("screen").style.backgroundColor = w;
 	var colpors = hexToRgb(w);
-	var colors = {};
+	var colors = [];
 	colors.push(colpors.r)
 	colors.push(colpors.g)
 	colors.push(colpors.b)
 	for (c in colors){
-		colors[c] = hparseInt(colors[c]) + 20;
+		colors[c] = parseInt(colors[c]) + 20;
 	}
 	document.getElementById("in").style.borderColor = rgbToHex(colors[0], colors[1], colors[2])
 	document.getElementById("in").style.backgroundColor = w;
