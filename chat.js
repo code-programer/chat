@@ -1,9 +1,17 @@
+function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
+  }
+}
 function hack(w,n){
 	write("Entering " + w + " server...<br>Passcode " + Math.floor(Math.random() * 100000000) + "<br>Data ")
 	var i = 0;
 	while(i<=n){
 		write(Math.floor(Math.random() * 100000000))
 		i = i + 1;
+		wait(500)
 	}
 }
 function hexToRgb(hex) {
