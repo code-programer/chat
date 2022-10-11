@@ -1,3 +1,9 @@
+function hack(w){
+	write("Entering " + w + " server...<br>Passcode " + MATH.floor(MATH.random() * 100000000) + "<br>Data ")
+	while(true){
+		write(MATH.floor(MATH.random() * 100000000))
+	}
+}
 function hexToRgb(hex) {
   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
   return result ? {
