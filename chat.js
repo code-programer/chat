@@ -1,7 +1,9 @@
-function hack(w){
+function hack(w,n){
 	write("Entering " + w + " server...<br>Passcode " + Math.floor(Math.random() * 100000000) + "<br>Data ")
-	while(true){
+	var i = 0;
+	while(i<=n){
 		write(Math.floor(Math.random() * 100000000))
+		i = i + 1;
 	}
 }
 function hexToRgb(hex) {
